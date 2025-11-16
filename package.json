@@ -23,12 +23,13 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "test": "vitest run",
+    "test": "vitest run --reporter=verbose",
+    "test:skip": "echo 'No tests configured, skipping...'",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf dist",
     "version:dev": "npm version prerelease --preid=dev.$(git rev-parse --short HEAD) --no-git-tag-version",
     "version:canary": "npm version prerelease --preid=canary --no-git-tag-version",
-    "prepublishOnly": "npm run clean && npm run build && npm test"
+    "prepublishOnly": "npm run clean && npm run build && npm run test"
   },
   "keywords": [
     "c3",
