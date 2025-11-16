@@ -16,9 +16,8 @@
     "./configuration": "./dist/configuration/index.js"
   },
   "files": [
-    "dist/",
-    "README.md",
-    "LICENSE"
+    "dist/**/*",
+    "README.md"
   ],
   "scripts": {
     "build": "tsc",
